@@ -1,6 +1,22 @@
 angular.module('starter.controllers', [])
 
-.controller('ChatsCtrl', function($scope, $stateParams){
+.controller('ChatsCtrl', function($scope, $stateParams, $http){
+
+
+  $scope.result = [];
+  $http.get('http://localhost:3000/audios/16')
+    .success(function(data, status, headers,config){
+      console.log('data success');
+      console.log('test', data); // for browser console
+      $scope.result = data; // for UI
+    })
+    .error(function(data, status, headers,config){
+      console.log('data error');
+    })
+    .then(function(result){
+      things = result.data;
+    });
+
   
   var CLIENT_ID = '524459381731-894is12erlildf1p7557v857bh5lcbu1';
   var API_KEY = 'AIzaSyBVqJFW84XaJb5FB8SX11UHvcbFCc1XjIE';
