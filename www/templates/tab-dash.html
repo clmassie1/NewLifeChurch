@@ -1,5 +1,23 @@
 <ion-view view-title="Listen">
-  <ion-content class="padding">
-    <h2>Church Audio</h2>
-  </ion-content>
+    <ion-content>
+        
+      </ion-content>
 </ion-view>
+
+
+<ion-view view-title="Music">
+    <ion-content>
+        <ion-audio-track track="track">
+       <ion-list>
+            <h1>New Audio</h1>
+          <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="event in result" type="item-text-wrap">
+            <h1>{{event.title}}</h1>
+            <audio controls>                                        
+                <source ng-src="{{event.description}}" type="audio/mpeg">                                                        
+            </audio>
+        </ion-list>
+          </ion-audio-track>
+    </ion-content>
+</ion-view>
+
+
