@@ -71,7 +71,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       views: {
         'tab-chats': {
           templateUrl: 'templates/chat-detail.html',
-          controller: 'ChatDetailCtrl'
         }
       }
     })
@@ -81,7 +80,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     views: {
       'tab-account': {
         templateUrl: 'templates/tab-account.html',
-        controller: 'AccountCtrl'
       }
     }
   });

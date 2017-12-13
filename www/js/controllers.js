@@ -90,6 +90,7 @@ angular.module('starter.controllers', [])
       var events = response.result.items;
       console.log('event', events);
       $scope.events = events;
+      $scope.$apply();
       appendPre('Upcoming events:');
       if (events.length > 0) {
         for (i = 0; i < events.length; i++) {
